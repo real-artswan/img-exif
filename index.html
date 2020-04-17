@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Images EXIF</title>
+	<style>
+		img {
+			max-width: 800px;
+			height: auto;
+		}
+		table {
+			border-collapse: collapse;
+		}
+
+		table, th, td {
+			border: 1px solid black;
+		}
+		.highlight {
+			font-weight: bolder;
+			background-color: yellow;
+		}
+		label {
+			margin-right: 3rem;
+		}
+	</style>
+</head>
+
+<body>
+	<form>
+		<label>
+			Choose images:<br>
+			<input type="file" id="files" name="files" multiple accept="image/*">
+		</label>
+	</form>
+
+	<div id="images"></div>
+	<pre id="errors"></pre>
+
+	<script src="./exif-reader.js"></script>
+	<script src="./index.js"></script>
+</body>
+
+</html>
